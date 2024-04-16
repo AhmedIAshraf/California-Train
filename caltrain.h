@@ -4,10 +4,9 @@ struct station {
 	int emptySeats;
 	int waitingPassengers;
 	int passengersOnTrain;
-	pthread_mutex_t mutex;// = PTHREAD_MUTEX_INITIALIZER;
-	pthread_cond_t waitTrainWithEmptySeats;// = PTHREAD_COND_INITIALIZER;
-	pthread_cond_t waitPassengers;// = PTHREAD_COND_INITIALIZER;
-	pthread_cond_t getOnBoard;// = PTHREAD_COND_INITIALIZER;
+	pthread_mutex_t mutex;
+	pthread_cond_t waitTrainWithEmptySeats;
+	pthread_cond_t waitPassengers;
 };
 
 void station_init(struct station *station);
